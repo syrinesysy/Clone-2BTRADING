@@ -1,0 +1,185 @@
+/* ProductItem.css */
+.product-item {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-tag, .new-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 13px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  z-index: 2;
+  transition: opacity 0.2s ease;
+}
+
+.promo-tag {
+  background: #d32f2f;
+  color: white;
+}
+
+.new-tag {
+  background: #08976c;
+  color: white;
+}
+
+.product-image {
+  position: relative;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.product-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.icons-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Changed from center to flex-end */
+  gap: 15px;
+  padding-bottom: 30px; /* Add bottom padding */
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.icon-circle {
+  background: rgb(0, 0, 0);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.icon-circle:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.icon-circle {
+  position: relative;
+  background: rgba(0, 0, 0, 0.7);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon-circle:hover {
+  background: #2196F3; /* Bleu */
+}
+
+.icon-circle:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  opacity: 1;
+}
+
+.icon-circle:hover::after {
+  content: '';
+  position: absolute;
+  bottom: calc(100% - 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.icon-circle::before,
+.icon-circle::after {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.icon-circle:hover::before,
+.icon-circle:hover::after {
+  opacity: 1;
+}
+.icon {
+  font-size: 16px;
+}
+
+/* Hover Effects */
+.product-item:hover .promo-tag,
+.product-item:hover .new-tag {
+  opacity: 0;
+}
+
+.product-item:hover .icons-overlay {
+  transform: translateY(0);
+}
+
+/* Rest of the styles */
+.product-info {
+  text-align: center;
+}
+
+.product-brand {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  min-height: 40px;
+}
+
+.product-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.current-price {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.old-price {
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+}

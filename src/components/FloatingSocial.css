@@ -1,0 +1,188 @@
+.floating-social-container {
+  position: fixed;
+  right: 20px;
+  top: 30%;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.whatsapp-button:hover {
+  background: #128C7E;
+  transform: scale(1.1);
+}
+
+/* Facebook Button */
+.facebook-button {
+  width: 35px;
+  height: 50px;
+  border-radius: 0 15px 15px 0;
+  background: #03558b;
+  color: white;
+  font-size: 30px;
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+  position: fixed;
+  left: 0;
+  top: 30%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.facebook-button::before {
+  content: 'Facebook';
+  position: absolute;
+  left: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* Icon container */
+.facebook-button span {
+  font-size: 10px;
+  position: relative;
+  z-index: 1;
+  transition: right 0.3s ease;
+}
+
+.facebook-button:hover {
+  width: 140px;
+  justify-content: flex-end; /* Keep icon on right */
+  padding-right: 15px; /* Maintain padding */
+}
+
+.facebook-button:hover::before {
+  opacity: 1;
+}
+
+/* reCAPTCHA Button */
+.recaptcha-button {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 0 0 0 0;
+  background: #4285f4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.877);
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.recaptcha-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.recaptcha-text {
+  opacity: 0;
+  position: absolute;
+  left: 50px;
+  white-space: nowrap;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+}
+
+.recaptcha-button:hover {
+  width: 240px;
+}
+
+.recaptcha-button:hover .recaptcha-text {
+  opacity: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .floating-social-container {
+    right: 10px;
+    top: 25%;
+  }
+  
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  .facebook-button {
+    top: 15%;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .facebook-button:hover {
+    width: 120px;
+  }
+
+  .facebook-button::before {
+    font-size: 14px;
+    left: 10px;
+  }
+  
+  .recaptcha-button {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 0 0 0 0;
+    background: #4285f4;
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 10000; /* Lower z-index so arrow appears on top */
+  }
+  
+  .recaptcha-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .recaptcha-button:hover {
+    width: 200px;
+  }
+  
+  .recaptcha-text {
+    font-size: 12px;
+    left: 40px;
+  }
+}

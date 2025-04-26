@@ -1,0 +1,19 @@
+.product-sections-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  .product-sections-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+  
+  /* Responsive design pour les écrans plus petits */
+  @media (max-width: 768px) {
+    .product-sections-wrapper {
+      flex-direction: column;
+    }
+  }

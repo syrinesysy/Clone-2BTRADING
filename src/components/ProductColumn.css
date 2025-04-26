@@ -1,0 +1,120 @@
+.p-column {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .column-title {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    color: #333;
+  }
+  
+  .column-navigation {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .nav-button {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .column-products {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .p-item {
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    gap: 15px; /* This creates space between image and info */
+  }
+  
+  
+  
+  .p-item:last-child {
+    border-bottom: none;
+  }
+  
+  .p-image-container {
+
+    width: 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Removed margin-right since we're using gap in parent */
+  }
+  
+  .p-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .p-info {
+    padding-top: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .p-title {
+    font-size: 17px;
+    margin: 0 0 8px 0;
+    color: #202020;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+
+  }
+  
+  .p-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .current-price {
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 12px;
+  }
