@@ -7,11 +7,13 @@ const ProductSection = ({ title, imageUrl }) => {
       <div className="product-section-content">
         <h2 className="product-section-title">{title}</h2>
         <div className="product-section-image-container">
-          <img 
-            src={imageUrl || "/api/placeholder/400/320"} 
-            alt={title} 
-            className="product-section-image"
-          />
+        <a href="#">
+        <img 
+          src={imageUrl || "/api/placeholder/400/320"} 
+          alt={title} 
+          className="product-section-image"
+        />
+      </a>
         </div>
       </div>
     </div>

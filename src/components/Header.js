@@ -8,7 +8,9 @@ import {
   faBars,
   faChevronDown,
   faTimes,
-  faPhone
+  faPhone,
+  faHeart,
+  faExchangeAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
@@ -126,12 +128,28 @@ const Header = () => {
           <img src={logo} alt="2B TRADING" className="logo" />
           
           <div className="user-section">
-            <FontAwesomeIcon icon={faUser} className="user-icon" />
-            <div className="cart-wrapper">
-              <div className="cart-badge">0</div>
-              <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
-            </div>
-          </div>
+  <div className="user-dropdown-container">
+    <FontAwesomeIcon icon={faUser} className="user-icon" />
+    <div className="user-dropdown">
+      <div className="dropdown-item">
+        <FontAwesomeIcon icon={faUser} className="dropdown-icon" />
+        <span>Connexion</span>
+      </div>
+      <div className="dropdown-item">
+        <FontAwesomeIcon icon={faHeart} className="dropdown-icon" />
+        <span>liste de souhaits (0)</span>
+      </div>
+      <div className="dropdown-item">
+        <FontAwesomeIcon icon={faExchangeAlt} className="dropdown-icon" />
+        <span>comparer (0)</span>
+      </div>
+    </div>
+  </div>
+  <div className="cart-wrapper">
+    <div className="cart-badge">0</div>
+    <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
+  </div>
+</div>
         </div>
         
         {/* Barre de recherche visible seulement si non scrollé en mode mobile */}
